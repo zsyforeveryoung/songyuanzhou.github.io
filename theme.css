@@ -1,0 +1,46 @@
+/* Shared visual theme; page structure and layout stay in each HTML file. */
+:root {
+    --ink: #253041;
+    --muted: #667085;
+    --green: #111827;
+    --line: #e4e7ec;
+    --paper: #ffffff;
+    --accent: #2bb7b3;
+}
+body {
+    font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+header, footer, .brand, nav a {
+    font-family: inherit;
+}
+a { color: #111827; }
+a:hover, a:focus-visible { color: var(--accent); }
+a:focus-visible { outline-color: var(--accent); }
+.brand { font-size: 21px; letter-spacing: 0; font-weight: 400; }
+nav a { font-size: 18px; color: #667085; }
+nav a:hover, nav a:focus, nav a[aria-current="page"] {
+    color: var(--accent);
+}
+h1, h2, h3 { color: #000000; font-weight: 600; letter-spacing: normal; }
+h1 { font-size: 32px; line-height: 1.25; }
+h2 { font-size: 24px; }
+h3 { font-size: 21px; }
+.portrait { background: #fbfcfe; border-color: var(--line); }
+.monogram { color: #98a2b3; }
+.portrait small { color: var(--muted); }
+.social-link {
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: #fbfcfe;
+}
+.social-link:hover { border-color: var(--accent); }
+.empty { background: #fbfcfe; border-color: var(--line); }
+.tag { color: var(--muted); border-color: var(--line); }
+@media (max-width: 700px) {
+    h1 { font-size: 30px; }
+}
